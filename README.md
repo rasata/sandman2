@@ -67,6 +67,13 @@ To connect to a PostgreSQL database, make sure you install a driver like
 $ sandman2ctl postgresql+psycopg2://scott:tiger@localhost/mydatabase
 ```
 
+To connect to a Oracle database, make sure you installed a driver like (instant_client 12 of Oracle)
+And then
+```bash
+$  sandman2ctl oracle://$SCHEMA_NAME:$PASSWORD@$HOST:$PORT/$SID?allow_twophase=false
+$  sandman2ctl oracle://SCOTT:oracle@localhost:1521/scott?allow_twophase=false
+```
+
 Again, see [the SQLAlchemy documentation](http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html)
 for a more comprehensive discussion of connection strings.
 
