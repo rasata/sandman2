@@ -43,8 +43,16 @@ rewrite project. `sandman2` is that project. While I'll continue to support
 **NOTE**: `sandman2` is not yet at feature parity with the original `sandman`, but
 should be soon. Getting there is currently the top priority.
 
-## Quickstart
+## Pre-requisities 
+This library is based on :
+- Python 2.7.2 
+  - python dependency :
+    - cx_Oracle  (6.3.1)
+    - SQLAlchemy (1.2)
 
+You can use virtualenv to manage the python version and the corresponding library dependency.
+
+## Quickstart
 Install sandman2 using `pip`: `$ pip install sandman2`. This provides the script
 `sandman2ctl`, which just takes the database URI string, described [here](http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html). For example, to connect to a SQLite database in the same directory you're running the script, you would run:
 
