@@ -44,7 +44,7 @@ rewrite project. `sandman2` is that project. While I'll continue to support
 should be soon. Getting there is currently the top priority.
 
 ## Pre-requisities 
-This library is based on :
+This library is working well on these version of library : (be sure to have theses version to avoid error)
 - Python 2.7.2 
   - python dependency :
     - cx_Oracle  (6.3.1)
