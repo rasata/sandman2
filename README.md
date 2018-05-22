@@ -78,7 +78,11 @@ $  sandman2ctl oracle://SCOTT:oracle@localhost:1521/scott?allow_twophase=false
 To connect to a **SQL Server database**, make sure you installed a driver like (pyodbc or pymssql - I prefer this one, as it enables adavanced handle of SQL Server field type )
 And then
 ```bash 
-sandman2ctl mssql+pymssql://$userName:$Password@$host:$port/$databaseName -s $schemaName -d
+# For pymssql
+sandman2ctl mssql+pymssql://$userName:$password@$host:$port/$databaseName -s $schemaName -d
+
+# For pyodbc 
+ sandman2ctl mssql+pymssql://$userName:$password@$host:$port/$databaseName?driver=ODBC+Driver+13+for+SQL+Server -s $schemaName -d-
 ```
 
 Again, see [the SQLAlchemy documentation](http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html)
