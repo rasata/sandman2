@@ -54,24 +54,31 @@ You can use virtualenv to manage the python version and the corresponding librar
 
 ## Quickstart
 Install sandman2 using `pip`: `$ pip install sandman2`. This provides the script
-`sandman2ctl`, which just takes the database URI string, described [here](http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html). For example, to connect to a SQLite database in the same directory you're running the script, you would run:
+`sandman2ctl`, which just takes the database URI string, described [here](http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html). 
+
+For example, to connect to a **SQLite database** in the same directory you're running the script, you would run:
 
 ```bash
 $ sandman2ctl sqlite+pysqlite:///database_file_name
 ```
 
-To connect to a PostgreSQL database, make sure you install a driver like
+To connect to a **PostgreSQL database**, make sure you install a driver like
 `psycopg2` using `pip`, then use the following connection string:
 
 ```bash
 $ sandman2ctl postgresql+psycopg2://scott:tiger@localhost/mydatabase
 ```
 
-To connect to a Oracle database, make sure you installed a driver like (instant_client 12 of Oracle)
+To connect to a **Oracle database**, make sure you installed a driver like (instant_client 12 of Oracle)
 And then
 ```bash
 $  sandman2ctl oracle://$SCHEMA_NAME:$PASSWORD@$HOST:$PORT/$SID?allow_twophase=false
 $  sandman2ctl oracle://SCOTT:oracle@localhost:1521/scott?allow_twophase=false
+```
+To connect to a **SQL Server database**, make sure you installed a driver like (pyodbc or pymssql - I prefer this one, as it enables adavanced handle of SQL Server field type )
+And then
+```bash 
+sandman2ctl mssql+pymssql://$userName:$Password@$host:$port/$databaseName -s $schemaName -d
 ```
 
 Again, see [the SQLAlchemy documentation](http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html)
